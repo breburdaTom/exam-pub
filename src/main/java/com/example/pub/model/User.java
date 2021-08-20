@@ -1,9 +1,12 @@
 package com.example.pub.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Entity
 @Table
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
 public class User {
 
     @Id

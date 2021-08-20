@@ -1,10 +1,11 @@
-package com.example.pub.model;
+package com.example.pub.controller;
 
+import com.example.pub.model.User;
+import com.example.pub.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class UserController {
@@ -23,7 +24,7 @@ public class UserController {
     }
 
     @GetMapping @RequestMapping(path = "user/{id}", method = RequestMethod.GET)
-    public Optional<User> getUserDetails(@PathVariable long id) {
+    public User getUserDetails(@PathVariable long id) {
         return userService.getUserById(id);
     }
 
