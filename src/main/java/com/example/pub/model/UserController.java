@@ -1,5 +1,6 @@
 package com.example.pub.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,17 +11,16 @@ import java.util.List;
 @RequestMapping(path = "users")
 public class UserController {
 
-    @GetMapping
-    public List<User> getUsers() {
-        return List.of(
-                new User(
-                        1L,
-                        "John",
-                        true,
-                        true,
-                        40
-                )
-        );
+    private final UserService userService;
+
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
+
+    @GetMapping
+    public List<User> getUsers() {
+        return userService.getUsers();
+    }
 }
