@@ -2,7 +2,8 @@
 
 ## Cíl projektu: Vytvořit aplikaci simulující  “hospodu”, která simuluje standardní chování v reálném světě. 
  
-```1. REST API - partially done
+```
+1. REST API - partially done
 2. Spring framework - no pain no gain
 3. Github - duh!
 4. Mysql 8.0 - DONE
