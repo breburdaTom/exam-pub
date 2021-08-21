@@ -10,6 +10,7 @@ reálném světě.
 5. Návrh MVC - done, I guess?
 6. Využití angličtiny v db návrhu i v kódu - LOL
 7. Basic auth  - TO DO (no idea)
+
 a. Přihlášení pro uživatele, kteří mohou objednávat  
 b. Účet výčepního, který uvidí jen statistiky 
  
