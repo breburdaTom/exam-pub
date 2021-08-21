@@ -30,13 +30,6 @@ public class User {
     public User() {
     }
 
-    public User(Long id, String name, boolean isActive, boolean isAdult, int pocket) {
-        this.id = id;
-        this.name = name;
-        this.isActive = isActive;
-        this.isAdult = isAdult;
-        this.pocket = pocket;
-    }
 
     public User(String name, boolean isActive, boolean isAdult, int pocket) {
         this.name = name;

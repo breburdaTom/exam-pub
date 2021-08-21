@@ -1,6 +1,8 @@
-package com.example.pub.config;
+package com.example.pub.Data;
 
+import com.example.pub.model.Drink;
 import com.example.pub.model.User;
+import com.example.pub.repository.DrinkRepository;
 import com.example.pub.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
@@ -9,10 +11,10 @@ import org.springframework.context.annotation.Configuration;
 import java.util.List;
 
 @Configuration
-public class UserConfig {
+public class DataLoader {
 
     @Bean
-    CommandLineRunner commandLineRunner(UserRepository repository) {
+    CommandLineRunner commandLineRunner(UserRepository userRepository, DrinkRepository drinkRepository) {
         return args -> {
             User tommy = new User(
                     "Tommy",
@@ -42,9 +44,31 @@ public class UserConfig {
                     150
             );
 
-            repository.saveAll(
+            Drink whiskey = new Drink(
+                    "whiskey",
+                    3,
+                    true
+            );
+
+            Drink gin = new Drink(
+                    "gin",
+                    2,
+                    true
+            );
+
+            Drink beer = new Drink(
+                    "beer",
+                    1,
+                    true
+            );
+
+            userRepository.saveAll(
                     List.of(tommy, arthur, finn, polly)
                 );
+
+            drinkRepository.saveAll(
+                    List.of(whiskey, gin, beer)
+            );
 
         };
     }
