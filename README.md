@@ -11,8 +11,8 @@ reálném světě.
 6. Využití angličtiny v db návrhu i v kódu - LOL
 7. Basic auth  - TO DO (no idea)
 
-a. Přihlášení pro uživatele, kteří mohou objednávat  
-b. Účet výčepního, který uvidí jen statistiky 
+  a. Přihlášení pro uživatele, kteří mohou objednávat  
+  b. Účet výčepního, který uvidí jen statistiky 
  
 Před realizací projektu 
  
@@ -21,6 +21,7 @@ Před realizací projektu
 Struktura api: 
 
 1. GET /users - DONE
+
 Vraci vsechny objekty User s atributy: 
 a. Id 
 b. Name 
@@ -29,6 +30,7 @@ d. IsAdult
 e. Pocket
 
 2. GET /users/{id} - partially DONE without implementing orders
+
 Vraci User s danym id a jeho objednavky: 
 a. Id 
 b. Name 
@@ -42,6 +44,7 @@ iii. Amount
 iv. Price
 
 3. GET /drink-menu - DONE
+
 Vraci napojovy listek, drinky maji tyto atributy: 
 a. Id 
 b. ProductName 
@@ -50,11 +53,13 @@ d. IsForAdult
  
 4. POST /buy //Validace zdali je uživatel plnoletý a zdali má dostatek financí v 
 peněžence - TO DO
+
   a. UserId 
   b. ProductId 
   c. Price
   
 5. GET /summary  - TO DO
+
 a. /summary/all 
 Vraci vsechny objednavky daneho produktu/drinku pro vsechny drinky a jejich 
 celkovy soucet: 
