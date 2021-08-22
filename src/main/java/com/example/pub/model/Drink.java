@@ -1,12 +1,18 @@
 package com.example.pub.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
 @Entity
 @Table
 @JsonIgnoreProperties({"hibernateLazyInitializer"})
+@Getter
+@Setter
+@ToString
 public class Drink {
 
     @Id
@@ -36,45 +42,5 @@ public class Drink {
         this.isForAdult = isForAdult;
     }
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public boolean getIsForAdult() {
-        return isForAdult;
-    }
-
-    public void setIsForAdult(boolean isForAdult) {
-        isForAdult = isForAdult;
-    }
-
-    @Override
-    public String toString() {
-        return "Drink{" +
-                "id=" + id +
-                ", productName='" + productName + '\'' +
-                ", price=" + price +
-                ", isForAdult=" + isForAdult +
-                '}';
-    }
 }
