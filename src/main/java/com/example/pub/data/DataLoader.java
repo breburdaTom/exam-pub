@@ -1,4 +1,4 @@
-package com.example.pub.Data;
+package com.example.pub.data;
 
 import com.example.pub.model.Drink;
 import com.example.pub.model.User;
