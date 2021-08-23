@@ -1,4 +1,4 @@
-# exam-pub Etyka digital job application process
+# exam-pub
 
 ## Cíl projektu: Vytvořit aplikaci simulující  “hospodu”, která simuluje standardní chování v reálném světě. 
  
